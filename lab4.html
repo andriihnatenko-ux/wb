@@ -1,58 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Моя Лаба 4</title>
+    <title>Laba4Tail</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex justify-center py-20">
 
-<div class="group bg-white w-80 rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+<body class="bg-slate-100 flex justify-center items-start pt-24">
 
-    <div class="h-1.5 w-full bg-gradient-to-r from-green-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition"></div>
+<div class="group w-80 bg-white rounded-xl shadow-md hover:shadow-xl duration-300 overflow-hidden">
 
-    <div class="p-6 pt-4">
-        <h1 class="text-xl font-bold">Starter</h1>
+    <!-- верхня градієнтна лінія -->
+    <div class="h-[6px] w-full bg-gradient-to-r from-green-400 to-cyan-400 opacity-0 group-hover:opacity-100 duration-300"></div>
 
-        <p class="bg-gray-100 text-gray-400 text-[10px] font-bold px-2 py-1 rounded my-3 inline-block">
+    <div class="px-6 pb-6 pt-5">
+
+        <h2 class="text-xl font-semibold">Starter</h2>
+
+        <span class="bg-gray-100 text-gray-400 text-[11px] font-semibold px-2 py-1 rounded mt-3 inline-block">
             7-DAYS FREE THEN:
-        </p>
+        </span>
 
-        <div>
+        <div class="mt-3">
             <span class="text-4xl font-bold">$83.25</span>
-            <span class="text-gray-400">/month</span>
+            <span class="text-gray-400 text-sm">/month</span>
         </div>
 
-        <p class="text-gray-400 text-xs mb-6">Billed yearly at $999.00</p>
+        <p class="text-gray-400 text-xs mt-1 mb-6">
+            Billed yearly at $999.00
+        </p>
 
-        <button class="w-full bg-gray-200 text-gray-500 font-bold py-2 rounded-md hover:bg-gray-300">
+        <button class="w-full bg-gray-200 text-gray-500 font-semibold py-2 rounded-md hover:bg-gray-300 transition">
             Downgrade to Starter
         </button>
 
         <hr class="my-6 border-gray-100">
 
         <div class="space-y-4 text-sm">
+
             <p>
-                <span class="text-green-400 font-bold">✦</span> <b>Primary user + 0 free team members</b><br>
+                <span class="text-green-400 font-bold">✦</span>
+                <strong>Primary user + 0 free team members</strong><br>
                 <span class="text-gray-400 text-xs ml-5">(extra team members for $35/month)</span>
             </p>
 
-            <p><span class="text-green-400 font-bold">✦</span> <b>Save unlimited properties</b></p>
+            <p>
+                <span class="text-green-400 font-bold">✦</span>
+                <strong>Save unlimited properties</strong>
+            </p>
 
             <p>
-                <span class="text-green-400 font-bold">✦</span> <b>10 000 exports</b><br>
+                <span class="text-green-400 font-bold">✦</span>
+                <strong>10 000 exports</strong><br>
                 <span class="text-gray-400 text-xs ml-5">(additional exports at $0.02 each)</span>
             </p>
 
             <p>
-                <span class="text-green-400 font-bold">✦</span> <b>500 free skip traces</b><br>
+                <span class="text-green-400 font-bold">✦</span>
+                <strong>500 free skip traces</strong><br>
                 <span class="text-gray-400 text-xs ml-5">(additional skip tracing at $0.08 each)</span>
             </p>
 
-            <p><span class="text-green-400 font-bold">✦</span> <b>Imports $0.01</b></p>
+            <p>
+                <span class="text-green-400 font-bold">✦</span>
+                <strong>Imports $0.01</strong>
+            </p>
+
         </div>
+
     </div>
 
 </div>
+
 </body>
 </html>
