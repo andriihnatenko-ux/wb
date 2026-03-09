@@ -1,85 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Lab4</title>
-
+    <title>Моя Лаба 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
+<body class="bg-gray-100 flex justify-center py-20">
 
-<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+<div class="group bg-white w-80 rounded-xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
 
-<div class="bg-white w-80 p-6 rounded-xl shadow-md border relative group hover:shadow-xl transition">
+    <div class="h-1.5 w-full bg-gradient-to-r from-green-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition"></div>
 
-    <!-- зелено-синя лінія -->
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-400 rounded-t-xl opacity-0 group-hover:opacity-100 transition"></div>
+    <div class="p-6 pt-4">
+        <h1 class="text-xl font-bold">Starter</h1>
 
-    <h2 class="text-xl font-semibold mb-3 mt-2">
-        Starter
-    </h2>
+        <p class="bg-gray-100 text-gray-400 text-[10px] font-bold px-2 py-1 rounded my-3 inline-block">
+            7-DAYS FREE THEN:
+        </p>
 
-    <span class="bg-gray-100 px-2 py-1 text-sm rounded">
-7-days free then:
-</span>
+        <div>
+            <span class="text-4xl font-bold">$83.25</span>
+            <span class="text-gray-400">/month</span>
+        </div>
 
-    <h1 class="text-4xl font-bold mt-3">
-        $83.25
-        <span class="text-lg text-gray-500 font-normal">/month</span>
-    </h1>
+        <p class="text-gray-400 text-xs mb-6">Billed yearly at $999.00</p>
 
-    <p class="text-gray-500 mb-4">
-        Billed yearly at $999.00
-    </p>
+        <button class="w-full bg-gray-200 text-gray-500 font-bold py-2 rounded-md hover:bg-gray-300">
+            Downgrade to Starter
+        </button>
 
-    <button class="w-full bg-gray-200 rounded-md py-2 text-gray-600 hover:bg-gray-300 transition mb-5">
-        Downgrade to Starter
-    </button>
+        <hr class="my-6 border-gray-100">
 
-    <hr class="mb-5">
+        <div class="space-y-4 text-sm">
+            <p>
+                <span class="text-green-400 font-bold">✦</span> <b>Primary user + 0 free team members</b><br>
+                <span class="text-gray-400 text-xs ml-5">(extra team members for $35/month)</span>
+            </p>
 
-    <ul class="space-y-3 text-sm">
+            <p><span class="text-green-400 font-bold">✦</span> <b>Save unlimited properties</b></p>
 
-        <li class="flex gap-2">
-            <span class="text-green-400">✦</span>
-            Primary user + 0 free team members
-        </li>
+            <p>
+                <span class="text-green-400 font-bold">✦</span> <b>10 000 exports</b><br>
+                <span class="text-gray-400 text-xs ml-5">(additional exports at $0.02 each)</span>
+            </p>
 
-        <li class="text-gray-500 text-xs ml-5">
-            (extra team members for $35/month)
-        </li>
+            <p>
+                <span class="text-green-400 font-bold">✦</span> <b>500 free skip traces</b><br>
+                <span class="text-gray-400 text-xs ml-5">(additional skip tracing at $0.08 each)</span>
+            </p>
 
-        <li class="flex gap-2">
-            <span class="text-green-400">✦</span>
-            Save unlimited properties
-        </li>
-
-        <li class="flex gap-2">
-            <span class="text-green-400">✦</span>
-            10 000 exports
-        </li>
-
-        <li class="text-gray-500 text-xs ml-5">
-            (additional exports at $0.02 each)
-        </li>
-
-        <li class="flex gap-2">
-            <span class="text-green-400">✦</span>
-            500 free skip traces
-        </li>
-
-        <li class="text-gray-500 text-xs ml-5">
-            (additional skip tracing at $0.08 each)
-        </li>
-
-        <li class="flex gap-2">
-            <span class="text-green-400">✦</span>
-            Imports $0.01
-        </li>
-
-    </ul>
+            <p><span class="text-green-400 font-bold">✦</span> <b>Imports $0.01</b></p>
+        </div>
+    </div>
 
 </div>
-
 </body>
 </html>
