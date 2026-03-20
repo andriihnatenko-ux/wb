@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab JS 2</title>
+    <style>
+        #elid {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Завдання 3 -->
+<h3>Пошук коду округу</h3>
+<input type="text" id="countyInput" placeholder="Введіть округ">
+<button id="btn">Знайти код</button>
+<div id="result"></div>
+
+<!-- Завдання 4 -->
+<h3>Форма</h3>
+<form id="form">
+    <input type="text" id="first_name" placeholder="Ім'я"><br><br>
+    <input type="text" id="last_name" placeholder="Прізвище"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <button type="submit">Відправити</button>
+</form>
+
+<!-- Завдання 5 -->
+<h3>Анімація</h3>
+<button id="left">Вліво</button>
+<button id="right">Вправо</button>
+<br><br>
+<div id="elid"></div>
+
+<script>
+    // ---------- Завдання 2 ----------
+    var a = 2;
+    var x = 1 + (a *= 2);
+    console.log("x =", x); // 5
+
+    if ("0") {
+        console.log("Привіт");
+    }
+
+    let name = "Василь";
+    let admin = name;
+    console.log(admin);
+
+    // ---------- Завдання 3 ----------
+    let countiesData = [];
+
+    async function fetchCounties() {
+        const res = await fetch("https://api.census.gov/data/2020/acs/acs5/profile?get=NAME&for=county:*");
+        const data = await res.json();
+
+        countiesData = data.slice(1).map(item => ({
+            name: item[0],
+            state: item[1],
+            county: item[2],
+            code: item[1] + item[2]
+        }));
+    }
+
+    function findCountyCode(name) {
+        const county = countiesData.find(c => c.name === name);
+        return county ? county.code : "Не знайдено";
+    }
+
+    document.getElementById("btn").addEventListener("click", () => {
+        const input = document.getElementById("countyInput").value;
+        const code = findCountyCode(input);
+        document.getElementById("result").textContent = code;
+    });
+
+    fetchCounties();
+
+    // ---------- Завдання 4 ----------
+    document.getElementById("form").addEventListener("submit", function(event) {
+        const first = document.getElementById("first_name").value;
+        const last = document.getElementById("last_name").value;
+        const email = document.getElementById("email").value;
+
+        if (!first || !last || !email) {
+            alert("Заповніть всі поля!");
+            event.preventDefault();
+        } else {
+            alert(`Дані: ${first} ${last}, ${email}`);
+        }
+    });
+
+    // ---------- Завдання 5 ----------
+    let position = 0;
+    const el = document.getElementById("elid");
+
+    document.getElementById("left").addEventListener("click", () => {
+        position -= 100;
+        el.style.transform = `translateX(${position}px)`;
+    });
+
+    document.getElementById("right").addEventListener("click", () => {
+        position += 100;
+        el.style.transform = `translateX(${position}px)`;
+    });
+</script>
+
+</body>
+</html>
